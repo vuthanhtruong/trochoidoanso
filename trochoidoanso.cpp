@@ -3,66 +3,48 @@
 #include <ctime>
 using namespace std;
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
 int main(int argc, char** argv) {
-	srand(time(NULL));
-	int solannhap=0;
-	int x=1+rand()%5;
-	while(true){
-		int a;
-		cout<<"\n nhap gia tri cua a: ";
-		cin>>a;
-		if(a==x){
-			while(true){
-			cout<<" so cua nguoi choi nhap dung roi";
-			cout<<"\n nguoi choi co muon choi tiep khong, ok thi nhap 1, ko thi nhap 0: ";
-		int n;
-		cin>>n;
-		cout<<"\n";
-		if(n == 0){
-			cout<<" tam biet ban nhe";
-			break;
-		}
-		else if(n==1){
-			cout<<" nhap tiep nao: ";
-		}
-		}
-		}
-		
-		else{
-			if(a!=x && a>x){
-				cout<<" so nguoi choi nhap sai va a > x";
-				solannhap++;
-			}
-			else if(a!=x && a<x){
-				cout<<" so nguoi choi nhap sai va a<x";
-				
-			}
-			else{
-				cout<<" so nguoi choi nhap khong trong khoang 1 den 100";
-			}
-				
-			}
-				
-			
-		if(solannhap>7){
-			cout<<" game over";
-			cout<<"\n nguoi choi co muon choi tiep khong, ok thi nhap 1, ko thi nhap 0: ";
-		int m;
-		cin>>m;
-		cout<<"\n";
-		if(m == 0){
-			cout<<" tam biet ban nhe";
-			break;
-		
-		}
-		else if(m==1){
-			cout<<" nhap tiep nao: ";
-		}
-		
-	    }
-	    
-		}
-	return 0;
+    srand(time(NULL));
+    int solannhap = 0;
+    int x = 1 + rand() % 100; // S?a thành kho?ng t? 1 d?n 100
+    while (true) {
+        int a;
+        cout << "\nNhap gia tri cua a: ";
+        cin >> a;
+        if (a == x) {
+            cout << "So cua nguoi choi nhap dung roi." << endl;
+            cout << "Nguoi choi co muon choi tiep khong? Nhap 1 neu muon, nhap 0 neu khong: ";
+            int n;
+            cin >> n;
+            cout << endl;
+            if (n == 0) {
+                cout << "Tam biet ban nhe." << endl;
+                break;
+            } else if (n == 1) {
+                cout << "Nhap tiep nao: ";
+            }
+        } else {
+            if (a > x) {
+                cout << "So nguoi choi nhap sai va a > x." << endl;
+            } else {
+                cout << "So nguoi choi nhap sai va a < x." << endl;
+            }
+            solannhap++;
+        }
+
+        if (solannhap > 7) {
+            cout << "Game over." << endl;
+            cout << "Nguoi choi co muon choi tiep khong? Nhap 1 neu muon, nhap 0 neu khong: ";
+            int m;
+            cin >> m;
+            cout << endl;
+            if (m == 0) {
+                cout << "Tam biet ban nhe." << endl;
+                break;
+            } else if (m == 1) {
+                cout << "Nhap tiep nao: ";
+            }
+        }
+    }
+    return 0;
 }

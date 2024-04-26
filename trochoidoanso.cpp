@@ -6,7 +6,7 @@ using namespace std;
 int main(int argc, char** argv) {
     srand(time(NULL));
     int solannhap = 0;
-    int x = 1 + rand() % 100; // S?a thành kho?ng t? 1 d?n 100
+    int x = 1 + rand() % 100;
     while (true) {
         int a;
         cout << "\nNhap gia tri cua a: ";
